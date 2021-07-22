@@ -18,7 +18,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(gazebo_ros_pkgs REQUIRED)
-find_package(ros2launch REQUIRED)
+#find_package(ros2launch REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
