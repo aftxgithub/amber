@@ -1,12 +1,14 @@
 # amber
 Amber Dynamics' Autonomous Worker Robot
 
-## Simulation
-Two options are provided for starting the simulation. To launch the simulation in a workspace without ROS2 installed, use the [Launch Script](#launch-script) (Ubuntu only). If you have an existing ROS2 installation, use the [ROS2 Launch Script](#ros2-launch).
+## Launch
+This repository provides two options for starting the simulation:
+- Launch in a workspace without ROS2 installed using the [Launch Script](#launch-script) (Ubuntu only)
+- Launch in a workspace with an existing ROS2 installation using [ROS2 Launch](#ros2-launch)
 
 ### Launch Script
 The launch script is suitable for a bare ubuntu installation (i.e. one without ros or gazebo). The script automatically installs ROS2 and Gazebo as well as the required build dependencies.
-Execute these steps to launch the simulation using the launch bash script:
+Execute these shell commands to launch the simulation using the launch bash script:
 
 #### Download the launch script
 ```shell
@@ -14,6 +16,7 @@ curl https://raw.githubusercontent.com/thealamu/amber/main/scripts/launch_sim_te
 chmod +x launch_sim_teleop.sh
 ```
 #### Run the script
+This command starts the simulation in an empty world:
 ```shell
 ./launch_sim_teleop.sh empty.world
 ```
@@ -39,7 +42,7 @@ source /usr/share/gazebo/setup.sh
 source ./install/setup.bash
 ```
 
-### Start the simulation
+#### Start the simulation
 You can start in an empty world:
 ```shell
 ros2 launch amber_sim launch.py world:=empty.world
