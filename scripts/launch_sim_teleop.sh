@@ -36,8 +36,9 @@ if [[ -z "$(which colcon)" ]]; then
     sudo apt install python3-colcon-common-extensions
 fi
 
-# install git
-sudo apt install -y git
+# install git 
+# install build-essentials (needed for cmake compiler)
+sudo apt install -y git build-essential
 
 # Launch Simulation
 
