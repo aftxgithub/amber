@@ -20,10 +20,6 @@ if [[ -z "$(which ros2)" ]]; then
 
 	sudo apt install ros-foxy-gazebo-ros-pkgs
 
-	# install colcon
-	curl -s https://packagecloud.io/install/repositories/dirk-thomas/colcon/script.deb.sh | sudo bash
-	sudo apt install python3-colcon-common-extensions
-
 	echo "ROS2 installation successful"
 fi
 
@@ -33,6 +29,15 @@ if [[ -z "$(which gazebo)" ]]; then
 	echo "Gazebo installation successful"
 fi
 
+# install colcon
+if [[ -z "$(which colcon)" ]]; then
+    echo "Installing colcon"
+    curl -s https://packagecloud.io/install/repositories/dirk-thomas/colcon/script.deb.sh | sudo bash
+    sudo apt install python3-colcon-common-extensions
+fi
+
+# install git
+sudo apt install -y git
 
 # Launch Simulation
 
