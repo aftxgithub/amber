@@ -12,7 +12,7 @@ Execute these shell commands to launch the simulation using the launch bash scri
 
 #### Download the launch script
 ```shell
-curl https://raw.githubusercontent.com/thealamu/amber/main/scripts/launch_sim_teleop.sh
+wget https://raw.githubusercontent.com/thealamu/amber/main/scripts/launch_sim_teleop.sh
 chmod +x launch_sim_teleop.sh
 ```
 #### Run the script
