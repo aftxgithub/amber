@@ -53,7 +53,11 @@ ros2 launch amber_sim launch.py world:=dynamic_obstacles.world
 ```
 
 ## Teleoperation
-To get the robot moving, open another terminal and start a teleop key node using the following shell command:
+To get the robot moving, open another terminal and source the setup.bash script in the install folder:
+```shell
+source amber_ws/install/setup.bash
+```
+Then start a teleop key node using the following shell command:
 ```shell
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap /cmd_vel:=/amber_sim/cmd_vel
 ```
